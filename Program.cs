@@ -10,6 +10,7 @@ namespace FileIOOperatiion
         {
             FieldExists();
             ReadAllLine();
+            ReadAllText();
         }
         /// <summary>
         /// Checks if the given path file exists 
@@ -34,6 +35,15 @@ namespace FileIOOperatiion
             Console.WriteLine(Lines[0]);
             Console.WriteLine(Lines[1]);
             Console.ReadKey();
+        }
+        /// <summary>
+        /// Method Reads all the lines in file and store as text
+        /// </summary>
+        public static void ReadAllText()
+        {
+            string path = "C:/Users/Ravula/source/repos/FileIOOperatiion/example.txt";
+            string lines = File.ReadAllText(path);
+            Console.WriteLine(lines);
         }
     }
 }
