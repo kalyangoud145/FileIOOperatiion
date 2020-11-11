@@ -8,11 +8,14 @@ namespace FileIOOperatiion
     {
         static void Main(string[] args)
         {
+            StreamReaderWriterOps streamReaderWriterOps = new StreamReaderWriterOps();
             FieldExists();
             ReadAllLine();
             ReadAllText();
             FileCopy();
             DeleteFile();
+            streamReaderWriterOps.ReadUsingStreamReader();
+            streamReaderWriterOps.WriteUsingStreamWriter();
         }
         /// <summary>
         /// Checks if the given path file exists 
