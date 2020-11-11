@@ -1,2 +1,5 @@
 helloworld
 apple
+operations using stream writer and reader
+operations using stream writer and reader
+operations using stream writer and reader
