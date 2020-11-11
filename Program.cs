@@ -11,6 +11,7 @@ namespace FileIOOperatiion
             FieldExists();
             ReadAllLine();
             ReadAllText();
+            FileCopy();
         }
         /// <summary>
         /// Checks if the given path file exists 
@@ -44,6 +45,17 @@ namespace FileIOOperatiion
             string path = "C:/Users/Ravula/source/repos/FileIOOperatiion/example.txt";
             string lines = File.ReadAllText(path);
             Console.WriteLine(lines);
+        }
+        /// <summary>
+        /// Method copies data from one file to another file
+        /// </summary>
+        public static void FileCopy()
+        {
+            Console.WriteLine("Copying");
+            string path = "C:/Users/Ravula/source/repos/FileIOOperatiion/example.txt";
+            string copyPath = @"C:\Users\Ravula\source\repos\FileIOOperatiion\Test.txt";
+            File.Copy(path, copyPath);
+            Console.ReadKey();
         }
     }
 }
