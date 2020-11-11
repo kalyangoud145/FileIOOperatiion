@@ -12,6 +12,7 @@ namespace FileIOOperatiion
             ReadAllLine();
             ReadAllText();
             FileCopy();
+            DeleteFile();
         }
         /// <summary>
         /// Checks if the given path file exists 
@@ -53,8 +54,18 @@ namespace FileIOOperatiion
         {
             Console.WriteLine("Copying");
             string path = "C:/Users/Ravula/source/repos/FileIOOperatiion/example.txt";
-            string copyPath = @"C:\Users\Ravula\source\repos\FileIOOperatiion\Test.txt";
+            string copyPath = @"C:\Users\Ravula\source\repos\FileIOOperatiion\Test2.txt";
             File.Copy(path, copyPath);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Delete the file
+        /// </summary>
+        public static void DeleteFile()
+        {
+            Console.WriteLine("Deleting file..");
+            string path = @"C:\Users\Ravula\source\repos\FileIOOperatiion\Test2.txt";
+            File.Delete(path);
             Console.ReadKey();
         }
     }
